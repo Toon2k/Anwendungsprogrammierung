@@ -18,8 +18,6 @@ public class Ostersonntag
     }
   }
 
-// Diese Methode mit Berechnung von Ostersonntag
-// (tag und monat) aus jahr füllen.
   public static void ermittleOstersonntag(int jahr)
   {
   int tag = 0, monat = 0;
