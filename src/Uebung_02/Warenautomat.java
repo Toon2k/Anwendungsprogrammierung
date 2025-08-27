@@ -9,10 +9,12 @@ package Uebung_02;
 
 public class Warenautomat
 {
+    public static final int ANZAHL_EDAMERBROETCHEN_DEFAULT = 50;
+    public static final int ANZAHL_SALAMIBROETCHEN_DEFAULT = 10;
+
     private int anzahlEdamerbroetchen;
     private int anzahlSalamibroetchen;
-    public static final int anzahlEdamerbroetchenDefault = 50;
-    public static final int getAnzahlSalamibroetchenDefault = 10;
+
 
     public Warenautomat(int anzahlE, int anzahlS) {
         anzahlEdamerbroetchen = anzahlE;
@@ -20,8 +22,8 @@ public class Warenautomat
     }
 
     public Warenautomat() {
-        anzahlEdamerbroetchen = anzahlEdamerbroetchenDefault;
-        anzahlSalamibroetchen = getAnzahlSalamibroetchenDefault;
+        anzahlEdamerbroetchen = ANZAHL_EDAMERBROETCHEN_DEFAULT;
+        anzahlSalamibroetchen = ANZAHL_SALAMIBROETCHEN_DEFAULT;
     }
 
     public void zeigeAnzahl() {
