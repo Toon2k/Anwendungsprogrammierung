@@ -9,8 +9,5 @@ public class AnwendungAufg4 {
 
         warenautomat1.zeigeInfo();
         warenautomat2.zeigeInfo();
-
-
     }
-
 }
