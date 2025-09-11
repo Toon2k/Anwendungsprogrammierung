@@ -1,0 +1,17 @@
+1	B	in Buch überschrieben
+
+2	A	nur in Artikel vorhanden
+
+3	B	nur in Buch vorhanden
+
+4	B	in Buch überschrieben
+
+5	A	nur in Artikel vorhanden
+
+6	B	nur in Buch vorhanden
+
+7	A	super verweist auf Basisklasse Artikel
+
+8	A	super verweist auf Basisklasse Artikel
+
+9	C	super verweist auf Basisklasse Artikel, diese hat aber keine Methode m2()
