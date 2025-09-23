@@ -15,28 +15,29 @@ import java.io.RandomAccessFile;
 
 public class SchreibeArtikel {
 
-    public static final String DATEI = "D:\\Verwaltungsinformatik\\Anwendungsprogrammierung\\Code\\Anwendungsprogrammierung\\src\\Uebung_08\\Aufg8_2\\list.txt";
+    public static final String DATEI = "D:\\Verwaltungsinformatik\\Anwendungsprogrammierung\\Code\\" +
+            "Anwendungsprogrammierung\\src\\Uebung_08\\Aufg8_2\\list.txt";
     public static void main(String [] args)
-  throws Exception
-  {
-      Artikel artikel = new Artikel(1);
-      Buch buch = new Buch("dem Hirsch ist ein Geweih gewachsen", 2);
-      Kugelschreiber kugelschreiber = new Kugelschreiber("gelb", 3);
-      Artikel[] aList = new Artikel[3];
+    throws Exception
+    {
+        Artikel artikel = new Artikel(1);
+        Buch buch = new Buch("dem Hirsch ist ein Geweih gewachsen", 2);
+        Kugelschreiber kugelschreiber = new Kugelschreiber("gelb", 3);
+        Artikel[] aList = new Artikel[3];
 
 
-      aList[0] = artikel;
-      aList[1] = buch;
-      aList[2] = kugelschreiber;
+        aList[0] = artikel;
+        aList[1] = buch;
+        aList[2] = kugelschreiber;
 
-      try (RandomAccessFile list = new RandomAccessFile(DATEI, "rw")) {
-          for (Artikel element : aList) {
+        try (RandomAccessFile list = new RandomAccessFile(DATEI, "rw")) {
+            for (Artikel element : aList) {
               list.writeBytes(element.toString() + "\n\n");
-          }
-          System.out.format("Dateien in list.txt geschrieben");
-      }
-      catch (IOException ioe) {
-        System.out.format("Fehlernachricht: %s", ioe.getMessage());
-          }
-  }
+            }
+            System.out.format("Dateien in list.txt geschrieben");
+        }
+        catch (IOException ioe) {
+            System.out.format("Fehlernachricht: %s", ioe.getMessage());
+            }
+    }
 }
