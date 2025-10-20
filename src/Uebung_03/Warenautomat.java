@@ -14,7 +14,7 @@ public class Warenautomat
     public Warenautomat(int anzahlEdamerbroetchen, int anzahlSalamibroetchen) {
         this.anzahlEdamerbroetchen = anzahlEdamerbroetchen;
         this.anzahlSalamibroetchen = anzahlSalamibroetchen;
-        automatennummer = ++maxNummer;
+        this.automatennummer = ++maxNummer;
     }
 
     public Warenautomat() {
