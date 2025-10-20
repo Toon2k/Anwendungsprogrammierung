@@ -22,9 +22,9 @@ public class Warenautomat
     }
 
     public void zeigeInfo() {
-        System.out.format("%d Edamerbroetchen vorhanden %n", anzahlEdamerbroetchen);
-        System.out.format("%d Salamaibroetchen vorhanden %n", anzahlSalamibroetchen);
-        System.out.format("Automatennummer: %d%n", automatennummer);
+        System.out.format("%d Edamerbroetchen vorhanden %n", this.anzahlEdamerbroetchen);
+        System.out.format("%d Salamaibroetchen vorhanden %n", this.anzahlSalamibroetchen);
+        System.out.format("Automatennummer: %d%n", this.automatennummer);
     }
 
     public static int getMaxNummer() {
@@ -32,6 +32,6 @@ public class Warenautomat
     }
 
     public int getAutomatennummer() {
-        return automatennummer;
+        return this.automatennummer;
     }
 }

@@ -11,7 +11,7 @@ public class WarenautomatAufg4
     private int automatennummer;
 
     {
-        automatennummer = ++maxNummer;
+        this.automatennummer = ++maxNummer;
     }
 
     public WarenautomatAufg4(int anzahlEdamerbroetchen, int anzahlSalamibroetchen) {
@@ -24,9 +24,9 @@ public class WarenautomatAufg4
     }
 
     public void zeigeInfo() {
-        System.out.format("%d Edamerbroetchen vorhanden %n", anzahlEdamerbroetchen);
-        System.out.format("%d Salamaibroetchen vorhanden %n", anzahlSalamibroetchen);
-        System.out.format("Automatennummer: %d%n", automatennummer);
+        System.out.format("%d Edamerbroetchen vorhanden %n", this.anzahlEdamerbroetchen);
+        System.out.format("%d Salamaibroetchen vorhanden %n", this.anzahlSalamibroetchen);
+        System.out.format("Automatennummer: %d%n", this.automatennummer);
     }
 
     public static int getMaxNummer() {
@@ -34,6 +34,6 @@ public class WarenautomatAufg4
     }
 
     public int getAutomatennummer() {
-        return automatennummer;
+        return this.automatennummer;
     }
 }
