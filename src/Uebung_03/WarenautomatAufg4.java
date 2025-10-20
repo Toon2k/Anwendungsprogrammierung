@@ -20,8 +20,7 @@ public class WarenautomatAufg4
     }
 
     public WarenautomatAufg4() {
-        this.anzahlEdamerbroetchen = ANZAHL_EDAMERBROETCHEN_DEFAULT;
-        this.anzahlSalamibroetchen = ANZAHL_SALAMIBROETCHEN_DEFAULT;
+        this(ANZAHL_EDAMERBROETCHEN_DEFAULT, ANZAHL_SALAMIBROETCHEN_DEFAULT);
     }
 
     public void zeigeInfo() {

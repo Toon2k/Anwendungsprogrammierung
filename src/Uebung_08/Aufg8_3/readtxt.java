@@ -13,7 +13,7 @@ public class readtxt {
         String zeile;
 
         try(RandomAccessFile list = new RandomAccessFile(DATEI, "rw")) {
-            while( (zeile = list.readLine()) != null)
+            while((zeile = list.readLine()) != null)
             System.out.println(zeile);
         }
         catch(IOException ioe) {
