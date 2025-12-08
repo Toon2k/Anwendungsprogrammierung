@@ -1,5 +1,6 @@
 package Uebung_08.Aufg8_3;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -16,9 +17,11 @@ public class readtxt {
             while((zeile = list.readLine()) != null)
             System.out.println(zeile);
         }
+        catch(FileNotFoundException fnfe) {
+            System.out.format("FileNotFoundException: %s", fnfe.getMessage());
+        }
         catch(IOException ioe) {
             System.out.format("IO-Fehler: %s", ioe.getMessage());
         }
-
     }
 }
