@@ -6,7 +6,7 @@
                   da Basisklasse abgeändert.
   Version       : 12.05.2023
 */
-package Uebung_11.Aufg11_1;
+package Uebung_11.Aufg11_1bis2;
 
 public class Geldautomat
 extends Automat {

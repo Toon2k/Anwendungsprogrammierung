@@ -7,20 +7,36 @@
                   Methode, Rethrowing, Überladen, Kommentare.
   Version       : 12.05.2023
 */
-package Uebung_11.Aufg11_1;
+package Uebung_11.Aufg11_1bis2;
 
 import java.io.RandomAccessFile;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Random;
 
 abstract public class Automat {
 
 // Name der Datei mit der Automatennummer    
-  private static final String AUTOMATENNUMMER_DATEI = "dateien/automat.nummer";
+  private static final String AUTOMATENNUMMER_DATEI = "D:\\Verwaltungsinformatik\\Anwendungsprogrammierung\\Code\\" +
+                "Anwendungsprogrammierung\\src\\Uebung_11\\Aufg11_1bis2\\list.txt";
   
   private static int maxNummer;
   private int automatennummer;
-  
+
+  static{
+    try (RandomAccessFile automatennummerdatei = new RandomAccessFile(AUTOMATENNUMMER_DATEI, "r")) {
+      System.out.println("gelesene Automatennummer:" + automatennummerdatei.readLine());
+    }
+    catch (FileNotFoundException fnfe) {
+      System.out.format("fnfe-Fehlermeldung %s%n", fnfe.getMessage());
+      maxNummer = 200;
+    }
+    catch (IOException ioe) {
+      System.out.format("ioe-Fehlermeldung %s%n", ioe.getMessage());
+      maxNummer = 200;
+    }
+  }
+
   {
     automatennummer = ++maxNummer; // Hochzählen der Nummer (vor Zuweisung)  	
   }

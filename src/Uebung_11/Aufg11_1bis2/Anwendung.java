@@ -6,7 +6,10 @@
                   Übung 11, Teil 1
   Version       : 23.05.2025
 */
-package Uebung_11.Aufg11_1;
+package Uebung_11.Aufg11_1bis2;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Anwendung {
   
@@ -57,9 +60,12 @@ public class Anwendung {
 //      System.out.format("Nummer = %d eingetragen%n",
 //                        nummer);
     }
-	//hier fuer Aufgabe 11 Teil 1 ergaenzen
-     
-        
+    catch (FileNotFoundException fnfe) {
+      System.out.format("fnfe-Fehlernachricht: %s", fnfe.getMessage());
+    }
+    catch (IOException ioe) {
+      System.out.format("ioe-Fehlernachricht: %s", ioe.getMessage());
+    }
   }
   
   public static void druckeListe(Automat [] mehrereAutomaten)
