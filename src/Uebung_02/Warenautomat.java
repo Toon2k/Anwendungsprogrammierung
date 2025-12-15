@@ -17,13 +17,13 @@ public class Warenautomat
 
 
     public Warenautomat(int anzahlE, int anzahlS) {
-        anzahlEdamerbroetchen = anzahlE;
-        anzahlSalamibroetchen = anzahlS;
+        this.anzahlEdamerbroetchen = anzahlE;
+        this.anzahlSalamibroetchen = anzahlS;
     }
 
     public Warenautomat() {
-        anzahlEdamerbroetchen = ANZAHL_EDAMERBROETCHEN_DEFAULT;
-        anzahlSalamibroetchen = ANZAHL_SALAMIBROETCHEN_DEFAULT;
+        this.anzahlEdamerbroetchen = ANZAHL_EDAMERBROETCHEN_DEFAULT;
+        this.anzahlSalamibroetchen = ANZAHL_SALAMIBROETCHEN_DEFAULT;
     }
 
     public void zeigeAnzahl() {
@@ -31,4 +31,3 @@ public class Warenautomat
         System.out.format("%d Salamaibroetchen vorhanden %n", anzahlSalamibroetchen);
     }
 }
-

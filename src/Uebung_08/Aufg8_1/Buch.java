@@ -17,7 +17,6 @@ public class Buch extends Artikel {
     super();
     this.titel = titel;
   }
-  
   public Buch(String titel, int artikelnummer)
   {
     super(artikelnummer);

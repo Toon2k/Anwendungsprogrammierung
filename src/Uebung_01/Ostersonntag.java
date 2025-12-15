@@ -26,7 +26,7 @@ public class Ostersonntag
   int rest7 = jahr % 7;
   int pruefziffer, a6, a7, a8, a9;
 
-  if (jahr >= 1900 && jahr <= 2099) {
+  if (1900 <= jahr && jahr <= 2099) {
     pruefziffer = 5;
   } else {
     pruefziffer = 6;
@@ -56,4 +56,3 @@ public class Ostersonntag
   }
 
 }
-

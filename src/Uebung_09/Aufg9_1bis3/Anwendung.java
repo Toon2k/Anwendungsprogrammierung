@@ -9,11 +9,11 @@ public class Anwendung {
         ArrayList<Artikel> artikelListe = new ArrayList<>();
         Artikel artikel = new Artikel();
         Buch buch = new Buch("Die Schildkröte kauft einen gelben Panzer", 1);
-        Kugelschreiber kugelschreiber = new Kugelschreiber("gelb", 2);
+
 
         artikelListe.add(artikel);
         artikelListe.add(buch);
-        artikelListe.add(kugelschreiber);
+        artikelListe.add(new Kugelschreiber("gelb", 2));
 
         artikelListe.remove(1);
 

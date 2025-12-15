@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class Anwendung {
 
   public static void main(String [] argumente) {
-    Buch marquez;
-    Buch lumet;
-    Kugelschreiber bigblue;
-
     try {
+      Buch marquez;
+      Buch lumet;
+      Kugelschreiber bigblue;
+
       marquez = new Buch("100 Jahre Einsamkeit");
       lumet = new Buch("Filme machen", 1924);
       bigblue = new Kugelschreiber("Blau", 2020);
@@ -30,11 +30,11 @@ public class Anwendung {
       bigblue.zeigeInfoAn();
 
 
-// Jedes Arrayelement ist eine Referenz vom Typ Artikel.                  
+// Jedes Arrayelement ist eine Referenz vom Typ Artikel.
       Artikel[] vieleArtikel = new Artikel[3];
 
 // Eine Referenz vom Typ Artikel kann auf
-// Artikel-, Buch- und Kugelschreiberobjekte zeigen.  
+// Artikel-, Buch- und Kugelschreiberobjekte zeigen.
 // Übung 10. Kein Objekt von Artikel mehr möglich!
 //  Artikel einArtikel = new Artikel();
       Artikel einArtikel = new Kugelschreiber("Mix");
@@ -60,7 +60,7 @@ public class Anwendung {
       System.out.format("Farbe = %s%n",
               bigblue.getFarbe());
 
-// Übung 10. Kein Objekt von Artikel mehr möglich!    
+// Übung 10. Kein Objekt von Artikel mehr möglich!
 //    gebeAus(new Artikel());
       gebeAus(marquez);
       gebeAus(bigblue);
@@ -87,10 +87,13 @@ public class Anwendung {
       System.out.format("%nAufruf der Methode%n");
       zeigeAlleArtikelAn(arlart);
 
-    } catch (FalscheArtikelnummerException e) {
-      e.behandle();
+
+    }
+    catch(FalscheArtikelnummerException fae){
+      fae.behandle();
     }
   }
+
 
   public static void zeigeAlleArtikelAn(ArrayList<Artikel> mehrereArtikel)
   {

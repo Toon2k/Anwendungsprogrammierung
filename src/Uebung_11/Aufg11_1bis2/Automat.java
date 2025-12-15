@@ -25,6 +25,7 @@ abstract public class Automat {
 
   static{
     try (RandomAccessFile automatennummerdatei = new RandomAccessFile(AUTOMATENNUMMER_DATEI, "r")) {
+      maxNummer = automatennummerdatei.readInt();
       System.out.println("gelesene Automatennummer:" + automatennummerdatei.readLine());
     }
     catch (FileNotFoundException fnfe) {
@@ -64,14 +65,14 @@ abstract public class Automat {
     catch (FileNotFoundException fnfe) {    
 // Evtl. Protokollierung in eine Log-Datei.    	        
       System.out.format("speichereAutomatennummer = %s%n", 
-                        fnfe);  
+                        fnfe.getMessage());
 // Rethrowing      
       throw fnfe;                        
     }
     catch (IOException ioe) {   	
 // Evtl. Protokollierung in eine Log-Datei.    	        
       System.out.format("speichereAutomatennummer = %s (%d)%n", 
-                        ioe, nummer);    	
+                        ioe.getMessage(), nummer);
 // Rethrowing      
       throw ioe;                        
     }
