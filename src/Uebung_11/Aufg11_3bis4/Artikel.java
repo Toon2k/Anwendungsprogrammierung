@@ -40,10 +40,11 @@ abstract public class Artikel{
     if ( artikelnummer >= MIN_ARTIKELNUMMER
   	 && artikelnummer <= MAX_ARTIKELNUMMER )
       this.artikelnummer = artikelnummer;
-    else
+    else {
       System.out.format("Fehlerhafte Artikelnummer = %d%n",
-                        artikelnummer);
+              artikelnummer);
       throw new FalscheArtikelnummerException(artikelnummer, MIN_ARTIKELNUMMER, MAX_ARTIKELNUMMER);
+    }
   }
     
   public final int getArtikelnummer()
